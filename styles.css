@@ -1,0 +1,171 @@
+/* project colors */
+
+:root {
+    --main-background: #EEB73A;
+    --main-black: #220F00;
+    --section-bottom-border: 0.1rem;
+    --navlist-height: 3.5rem;
+    --header-height: calc(var(--section-bottom-border) + var(--navlist-height))
+}
+
+/* 
+    Makes sure that all element have no padding & margin by default
+    
+    Also sets the font size. 16px * 62.5% equals 10px. This is done
+    to be able to easily use the rem unit. Which is now 10px.
+
+    rem will therefore be sued for size values, margin and padding.
+    Some media queries further down reduces the size when the screen
+    reduced. It will therefore have an impact on properties using rem.
+
+    16px * 62.5% is used in stead of just 62.5% to ensure uniformity 
+    accross browsers that may have a different default then 16px.
+
+    And a % is used to more easily make changes to the font size.
+*/
+
+html {
+    font-size: calc(16px * 62.5%);
+}
+
+html * {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+   All content elements are set to inherit by default
+   so that if an element changes its box-sizing, its children
+   will inherit its box sizing.
+   
+   It is set by default to border-box sizing in the body
+*/
+
+html *,
+html *::before,
+html *::after {
+    box-sizing: inherit;
+}
+
+
+@media (max-width: 1200px) {
+    html {
+        font-size: calc(16px * 60%);
+    }
+}
+  
+
+@media (max-width: 980px) {
+    html {
+        font-size: calc(16px * 58%);
+    }
+}
+  
+  
+@media (max-width: 460px) {
+    html {
+        font-size: calc(16px * 55%);
+    }
+}
+
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: var(--main-background);
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  text-align: start;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+  
+h2 {
+    font-size: 2.8rem;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--main-background);
+    border-bottom: var(--section-bottom-border) solid var(--main-black);
+}
+
+#navbar {
+    width: 100%;
+}
+
+ul {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+#navlist {
+    width: 460px;
+    height: var(--navlist-height);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#navlist a {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    color: var(--main-black);
+    padding: 0.8rem;
+    border: 0.2rem solid var(--main-background);
+}
+
+#navlist a:hover {
+    border-color: var(--main-black);
+    transition: border-color 0.3s ease-out;
+}
+
+.navlist_separator {
+    width: 0.1rem;
+    height: 1.8rem;
+    background-color: var(--main-black); 
+}
+
+#about {
+    margin-top: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: var(--section-bottom-border) solid var(--main-black);
+    /*min-height: calc(100vh - var(--header-height));*/
+    min-height: 100vh;
+    width: 100%;
+    min-width: 460px;
+}
+
+#about h1 {
+    width: 95%;
+    min-width: 460px;
+}
+
+#portfolio {
+    /*min-height: calc(100vh - var(--header-height));*/
+    width: 100%;
+    min-width: 460px;
+    border-bottom: var(--section-bottom-border) solid var(--main-black);
+}
