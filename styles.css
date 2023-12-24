@@ -158,9 +158,20 @@ a {
     align-items: center;
     justify-content: center;
     border-bottom: var(--section-bottom-border) solid var(--main-black);
+
+    /*
+        This attributes make sure that the height of the section is as high as the viewport 
+        minus the height of the navigation bar. That way, the user sees the whole section and
+        its content without having to scroll. 
+    */
     min-height: calc(100vh - var(--header-height));
     width: 100%;
     min-width: var(--min-width);
+
+    /*
+        This attribute using the header-height variable ensures that, when a link to that 
+        section is clicked the section will be placed right under the navigation bar. 
+    */
     scroll-margin-top: var(--header-height);
 }
 
@@ -267,6 +278,13 @@ footer a:hover {
     margin-top: -1.8rem;
 }
 
+/*
+    This media query changes the contact list from horizontal
+    to vertical when the screen will have a screen width of 970 
+    px or less, the space between each list item is also reduced
+    and the distance between the list and the section title is also
+    reduced
+*/
 @media (max-width: 970px) {
     footer div {
         display: flex;
