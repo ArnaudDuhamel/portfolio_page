@@ -178,6 +178,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-margin-top: var(--header-height);
 }
 
 .project_tile_container {
