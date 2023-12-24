@@ -78,7 +78,6 @@ This is the fifth and last project done to obtain the Free Code Camp Responsive 
                 </a>
             </div>
             </div>
-            <a id="show_all_button" href="https://codepen.io/Arnaud-Duhamel/pens/public" target="_blank">Show all</a>
        </section>
 
        <!-- CONTACTS -->
@@ -336,11 +335,6 @@ img {
 #projects a:hover {
     border-color: var(--main-black);
     transition: border-color 0.3s ease-out;
-}
-
-#show_all_button {
-    margin: 1rem 0 2rem 0;
-    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 footer {
