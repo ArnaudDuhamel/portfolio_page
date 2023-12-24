@@ -411,3 +411,5 @@ The design was inspired by this page:
 <img src="images/portfolio_idea.png" height="600px" width="800px" />
 
 ## Final product
+
+<img src="images/final_product.png" />
