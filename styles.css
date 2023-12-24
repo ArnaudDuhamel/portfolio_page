@@ -10,7 +10,8 @@
     --main-black: #220F00;
     --section-bottom-border: 0.1rem;
     --navlist-height: 3.5rem;
-    --header-height: calc(var(--section-bottom-border) + var(--navlist-height))
+    --header-height: calc(var(--section-bottom-border) + var(--navlist-height));
+    --min-width: 460px;
 }
 
 /* 
@@ -80,7 +81,6 @@ body {
     font-weight: 700;
     line-height: 1.5;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     background-color: var(--main-background);
 }
 
@@ -121,7 +121,7 @@ ul {
 }
 
 #navlist {
-    width: 460px;
+    width: var(--min-width);
     height: var(--navlist-height);
 }
 
@@ -161,18 +161,18 @@ a {
     /*min-height: calc(100vh - var(--header-height));*/
     min-height: 100vh;
     width: 100%;
-    min-width: 460px;
+    min-width: var(--min-width);
 }
 
 #about h1 {
     width: 95%;
-    min-width: 460px;
+    min-width: var(--min-width);
 }
 
 #portfolio {
     /*min-height: calc(100vh - var(--header-height));*/
     width: 100%;
-    min-width: 460px;
+    min-width: var(--min-width);
     border-bottom: var(--section-bottom-border) solid var(--main-black);
     display: flex;
     flex-direction: column;
@@ -188,13 +188,13 @@ a {
     justify-content: center;
     align-items: flex-start;
     width: 95%;
-    min-width: 460px;
+    min-width: var(--min-width);
     gap: 0.5rem;
 }
 
 .project-tile {
     width: 45%;
-    min-width: 460px;
+    min-width: var(--min-width);
     max-width: 500px;
 }
 
